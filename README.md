@@ -6,7 +6,8 @@ How this measuring tool works:
 3) The arduino sends the ms latency value through serial, the python program .
 4) These steps repeat for at least 10 times to get an accurate measurement.
 
-
+![Arduino circuit](https://github.com/ArtDor2/display_lag_tester/blob/master/images/arduino.jpg)
+![Arduino with Python program](https://github.com/ArtDor2/display_lag_tester/blob/master/images/arduino%20and%20program.jpg)
 
 TO-DO:
 - [ ] Add diagram of the aruino curcuit, a screenshot of the program, and a photo of both the program and the arduino running the test.
