@@ -14,3 +14,4 @@ TO-DO:
 - [ ] Dont count the first few measurements due to starting the python program.
 - [ ] Reduce the latency of the Arduino sending serial data to the Python program (current added latency is about 80ms)
 - [ ] Calibrate measuring latency by getting +0ms min and +16ms max using a CRT monitor and subtracting that value from the measured to get a much more accurate latency value.
+- [ ] Make an alternate version with a pressure resistor to test other devices such as an Android phone.
