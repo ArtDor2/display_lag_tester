@@ -1,4 +1,4 @@
-// uses pressure sensor to start countdown
+// auto, uses photoresistor sensor to calculate ms latency of display
 
 const int pPressure = A0; // Photoresistor at Arduino analog pin A0
 const int pLight = A1;
@@ -37,35 +37,20 @@ void loop(){
         }
     }
 
-    // pressure mouseclick version:
-    if (value_pressure > 20) { // every 200ms send signal to draw squares
-//        Serial.println("f"); // f = signal to pc to flash white squares
-        StartTime = millis(); // start countdown
-        waiting_for_black = 0;
-    } else {
+    if (timer < 200) { // every 200ms send signal to draw squares
         if (send_now == true) {
             Serial.println(latency);
             send_now = false;
         } else {
             Serial.println("w"); // w = signal to wait for flash signal
         }
+        timer += 1;
+    } else {
+        Serial.println("f"); // f = signal to pc to flash white squares
+        timer = 0;
+        StartTime = millis(); // start countdown
+        waiting_for_black = 0;
     }
-//        timer += 1;
-
-//    if (timer < 200) { // every 200ms send signal to draw squares
-//        if (send_now == true) {
-//            Serial.println(latency);
-//            send_now = false;
-//        } else {
-//            Serial.println("w"); // w = signal to wait for flash signal
-//        }
-////        timer += 1;
-//    } else {
-//        Serial.println("f"); // f = signal to pc to flash white squares
-//        timer = 0;
-//        StartTime = millis(); // start countdown
-//        waiting_for_black = 0;
-//    }
 
     delay(1); //1ms delay
 }
