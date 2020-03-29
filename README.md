@@ -6,13 +6,16 @@ How this measuring tool works:
 3) The arduino sends the ms latency value through serial, the python program .
 4) These steps repeat for at least 10 times to get an accurate measurement.
 
-![Arduino circuit](https://github.com/ArtDor2/display_lag_tester/blob/master/images/arduino.jpg)
-![Arduino with Python program](https://github.com/ArtDor2/display_lag_tester/blob/master/images/arduino%20and%20program.jpg)
+![Arduino view](https://github.com/ArtDor2/display_lag_tester/blob/master/images/IMG_20200329_175024.jpg)
+![Arduino view 2](https://github.com/ArtDor2/display_lag_tester/blob/master/images/IMG_20200329_174912.jpg)
+![test demo](https://github.com/ArtDor2/display_lag_tester/blob/master/images/test%20demo.png)
 
 TO-DO:
-- [ ] Add diagram of the aruino curcuit, a screenshot of the program, and a photo of both the program and the arduino running the test.
-- [ ] Record the data of the measured latency coming from the arduino
-- [ ] Dont count the first few measurements due to starting the python program.
-- [ ] Reduce the latency of the Arduino sending serial data to the Python program (current added latency is about 80ms)
+- [x] Add diagram of the aruino curcuit, a screenshot of the program, and a photo of both the program and the arduino running the test.
+- [x] Record the data of the measured latency coming from the arduino ty python dictionary
+- [x] show min max ms
+- [ ] save data to file
+- [x] Dont count the first few measurements due to starting the python program.
+- [ ] Reduce the latency of the Arduino sending serial data to the Python program (current added latency is about 70ms)
 - [ ] Calibrate measuring latency by getting +0ms min and +16ms max using a CRT monitor and subtracting that value from the measured to get a much more accurate latency value.
 - [ ] Make an alternate version with a pressure resistor to test other devices such as an Android phone.
