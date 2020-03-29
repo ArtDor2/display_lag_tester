@@ -1,4 +1,4 @@
-# display_lag_tester v0.3 2020-03-29
+# input_lag_test v0.3 2020-03-29
 Measures the input lag of a display in milliseconds through the serial port in Arduino Uno and a photoresistor. 
 How this measuring tool works:
 1) The arduino sends a trigger through the serial interface to a pyhton program running on the computer and starts counting in ms, the program draws a white square under the sensor changing the area from black to white and back to black.
